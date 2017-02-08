@@ -36,6 +36,16 @@
       <pre><code class="language-bash">Generating public/private rsa key pair.</code></pre>
       <p>Now your will be prompted to enter file name, just press ENTER button in this step.</p>
       <pre><code class="language-bash">Enter a file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]</code></pre>
+      <p>You will be asked for passphrase, do not enter any passphrase.</p>
+      <pre><code class="language-bash">Enter passphrase (empty for no passphrase): [Type a passphrase]
+Enter same passphrase again: [Type passphrase again]</code></pre>
+      <p>Start ssh-agent</p>
+      <pre><code class="language-bash">$ eval "$(ssh-agent -s)"</code></pre>
+      <p>Then, add your newly generated key to ssh-agent.</p>
+      <pre><code class="language-bash">$ ssh-add ~/.ssh/id_rsa</code></pre>
+      <p>Now login to your github account, goto <b>settings >> SSH and GPG keys >> New SSH key >> Enter your SSH key and click ADD SSH key.</b></p>
+      <p>Your ssh key will be found in /.ssh/id_rsa_pub.</p>
+      <p>You are good to go. Start using github using SSH.</p>
 
     
   </div>
