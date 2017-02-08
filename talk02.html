@@ -14,7 +14,7 @@
     <body>
     <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo center">Introduction to Git & Github</a>
+      <a href="#" class="brand-logo center">Talk 02: Introduction to Git & Github</a>
     </div>
   </nav>
   <div class="container">
@@ -27,11 +27,15 @@
       <p>Congratulations!!!! You have git installed in your system. Open your git bash and now is the time to set up git.</p>
       <p>Set your name and email in your local git setting. To do so, use following command.</p>
       <pre><code class="language-bash">$ git config --global user.name "Your Name"
-      # Example: git config --global user.name "Piyush Maurya"</code></pre>
+# Example: git config --global user.name "Piyush Maurya"</code></pre>
       <pre><code class="language-bash">$ git config --global user.email "Email"
-      # Example: git config --global user.email "piyush.maurya@live.in"</code></pre>
+# Example: git config --global user.email "piyush.maurya@live.in"</code></pre>
       <p>Now you set up git in your local system, it is time to geerate a RSA key so that you can connect to your github repo using SSH without typing your username and password everytime.</p>
-      <pre><code class="language-bash">$ git push origin master</code></pre>
+      <pre><code class="language-bash">$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</code></pre>
+      <p>This will start creating a ssh key using your email id.</p>
+      <pre><code class="language-bash">Generating public/private rsa key pair.</code></pre>
+      <p>Now your will be prompted to enter file name, just press ENTER button in this step.</p>
+      <pre><code class="language-bash">Enter a file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]</code></pre>
 
     
   </div>
